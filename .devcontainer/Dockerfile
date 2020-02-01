@@ -78,8 +78,8 @@ ENV REASONCLI_VERSION	3.1.0
 RUN npm install npm@latest -g
 RUN npm install -g --unsafe-perm reason-cli@$REASONCLI_VERSION-linux
 RUN npm install -g --unsafe-perm bs-platform
+RUN npm install -g --unsafe-perm esy
 RUN npm install -g --unsafe-perm yarn
-RUN npm install -g esy
 
 RUN locale-gen en_US.UTF-8
 
@@ -87,8 +87,6 @@ RUN locale-gen en_US.UTF-8
 RUN chsh -s /usr/bin/fish developer
 
 USER developer
-
-RUN echo 0 | code --install-extension freebroccolo.reasonml
 
 ENV LANG en_US.UTF-8
 ENV LC_ALL en_US.UTF-8
