@@ -79,6 +79,7 @@ RUN npm install npm@latest -g
 RUN npm install -g --unsafe-perm reason-cli@$REASONCLI_VERSION-linux
 RUN npm install -g --unsafe-perm bs-platform
 RUN npm install -g --unsafe-perm yarn
+RUN npm install -g esy
 
 RUN locale-gen en_US.UTF-8
 
